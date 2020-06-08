@@ -19,18 +19,3 @@
 /.web-server-pid
 ###< symfony/web-server-bundle ###
 
-### VisualStudioCode ###
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-
-### VisualStudioCode Patch ###
-# Ignore all local history of files
-.history
-# Ignore composer.lock
-composer.lock
-
-# Ignore symfony.lock
-/symfony.lock
