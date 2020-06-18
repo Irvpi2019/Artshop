@@ -2,25 +2,25 @@
 
 namespace App\Repository;
 
-use App\Entity\OederHasProduckts;
+use App\Entity\OrderHasProducts;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @method OederHasProduckts|null find($id, $lockMode = null, $lockVersion = null)
- * @method OederHasProduckts|null findOneBy(array $criteria, array $orderBy = null)
- * @method OederHasProduckts[]    findAll()
- * @method OederHasProduckts[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method OrderHasProducts|null find($id, $lockMode = null, $lockVersion = null)
+ * @method OrderHasProducts|null findOneBy(array $criteria, array $orderBy = null)
+ * @method OrderHasProducts[]    findAll()
+ * @method OrderHasProducts[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class OederHasProducktsRepository extends ServiceEntityRepository
+class OrderHasProductsRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, OederHasProduckts::class);
+        parent::__construct($registry, OrderHasProducts::class);
     }
 
     // /**
-    //  * @return OederHasProduckts[] Returns an array of OederHasProduckts objects
+    //  * @return OrderHasProducts[] Returns an array of OrderHasProducts objects
     //  */
     /*
     public function findByExampleField($value)
@@ -37,7 +37,7 @@ class OederHasProducktsRepository extends ServiceEntityRepository
     */
 
     /*
-    public function findOneBySomeField($value): ?OederHasProduckts
+    public function findOneBySomeField($value): ?OrderHasProducts
     {
         return $this->createQueryBuilder('o')
             ->andWhere('o.exampleField = :val')
