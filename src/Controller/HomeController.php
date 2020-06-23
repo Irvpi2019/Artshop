@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Entity\Products;
+use phpDocumentor\Reflection\DocBlock\Tags\Var_;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -12,8 +14,13 @@ class HomeController extends AbstractController
      */
     public function index()
     {
+        $repo = $this->getDoctrine()->getRepository(Products::class);
+        $products = $repo->findAll();
         return $this->render('home/index.html.twig', [
             'controller_name' => 'HomeController',
+            'products' => $products
+
+            
         ]);
     }
 
@@ -30,11 +37,17 @@ class HomeController extends AbstractController
     }
 
     /**
-     * @Route("/home/12", name="home/show")
+     * @Route("/home/{id}", name="home_show")
      */
 
-    public function show(){
-        return $this->render('home/show.html.twig');
+    public function show($id){
+        $repo = $this->getDoctrine()->getRepository(Products::class);
+        $products = $repo->find($id);
+        return $this->render('home/show.html.twig', [
+            'controller_name' => 'HomeController',
+            'products' => $products
+
+            ]);
     }
 
 }

@@ -3,7 +3,7 @@
 {% block title %}Hello HomeController!{% endblock %}
 
 {% block body %}
-   <a href="{{ path('home/show') }}" class="btn btn-primary">Lire la suite</a>
+    
 
 <style>
 
@@ -19,6 +19,27 @@
     <ul>
         <li>Your controller at <code><a href="{{ 'C:/wamp64/www/Artshop/src/Controller/HomeController.php'|file_link(0) }}">src/Controller/HomeController.php</a></code></li>
         <li>Your template at <code><a href="{{ 'C:/wamp64/www/Artshop/templates/home/index.html.twig'|file_link(0) }}">templates/home/index.html.twig</a></code></li>
+        <li>
+
+        {% for products in products %}
+
+            <h2>{{ products.prodName }}</h2>
+           
+            <p>
+                {{ products.description | raw }}
+                Added at {{ products.addAt | date('m/d/Y') }} at {{ products.addAt | date('H:i') }}
+                <img src = "{{ products.image }}" alt="">
+            <a href="{{ path('home_show', { 'id': products.id }) }}" class="btn btn-primary">Lire la suite</a>
+            </p>
+
+        
+        {% endfor %}
+
+</li>
     </ul>
+    
 </div>
+
+
+
 {% endblock %}
