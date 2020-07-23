@@ -19,9 +19,7 @@ class HomeController extends AbstractController
         $products = $repo->findAll();
         return $this->render('home/index.html.twig', [
             'controller_name' => 'HomeController',
-            'products' => $products
-
-            
+            'products' => $products   
         ]);
     }
 
@@ -32,10 +30,19 @@ class HomeController extends AbstractController
     {
         return $this->render('home/home.html.twig', [
             'title' => "Bienvenue sur la page d'acceil!",
-            'age' => 1,
+
         ]);
 
     }
+    
+    /**
+     * @Route("/home/new", name="home_create")
+     */
+
+    public function create(){
+        return $this->render('home/create.html.twig');
+    }
+
 
     /**
      * @Route("/home/{id}", name="home_show")
@@ -47,5 +54,7 @@ class HomeController extends AbstractController
             'products' => $products
             ]);
     }
+
+
 
 }

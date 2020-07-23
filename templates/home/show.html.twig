@@ -1,7 +1,14 @@
+{% extends 'base.html.twig' %}
+
 {% block body %}
-   <p>Bonjour 
+<section class="fullscreen">
+<div class="show">
+   <p>Bonjour</p> 
   
    <h2>{{ products.prodName }}</h2>
-
-
+   <div class="fullscreen__img">
+   <img src="{{ baseUri }}/assets/img/BigLogo.png" alt="logo" />
+   </div>
+</div>
+</section>
 {% endblock %}

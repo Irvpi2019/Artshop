@@ -2,27 +2,87 @@
 <html>
   <head>
     <meta charset="UTF-8" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
       {% block title %}
         Welcome!
       {% endblock %}
     </title>
+    
+    {% block stylesheets %}
+    <link href="../css/normalize.min.css" rel="stylesheet">
 
     <link rel="stylesheet"
       href="https://bootswatch.com/4/flatly/bootstrap.min.css" />
-    {% block stylesheets %}
+      <link href="https://fonts.googleapis.com/css?family=Cardo:400i|Open+Sans:700|Raleway:300,400,600,700&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="{{ baseUri }}/assets/css/style.css">
+        <script src="https://kit.fontawesome.com/cb623bc3d0.js" crossorigin="anonymous"></script>
     {% endblock %}
+
+</header>
   </head>
+  
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<div class="wrapper">
+
+
+          <header>
+        <nav>
+      
+            <input type="checkbox" name="" id="chechbox-menu">
+            <label for="chechbox-menu">
+                <ul class="menu touch">
+                    <li><a class="logo" href="{{ path('home') }}" "#about">Artshop
+                    <img src="{{ baseUri }}/assets/img/LogoSmall.png" alt="logo" /></a></li>
+          
+                    <li><a class="link" href="{{ path('home') }}#about">About</a></li>
+                    <li><a class="link" href="{{ path('index') }}">Paintings</a></li>
+                    <li><a class="link" href="{{ path('home_create') }}">Artists</a></li>
+                    <li><a class="contacts" href="#">Contact</a></li>
+                    <li><a class="link" href="#">Registration</a></li>
+                    <li><a class="link" href="#">Login</a></li>
+                    <li><a class="link" href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                    <li><a class="link" href="#">Language</a></li>
+                </ul>
+                <span class="toggle">-+-</span>
+            </label>
+        </nav>
+    </header>
+
+    <!--
+    <div class="page-wrapper">
+
+  <header class="main-header">
+    <div class="main-header__container container">
+ 
+      <h1 class="visually-hidden">YetiCave</h1>
+      <a class="main-header__logo">
+        <img src="{{ baseUri }}/assets/img/LogoSmall.png" alt="Logo">
+      </a>
+      <form class="main-header__search" method="get" action="https://echo.htmlacademy.ru" autocomplete="off">
+        <input type="search" name="search" placeholder="Поиск лота">
+        <input class="main-header__search-btn" type="submit" name="find" value="Найти">
+      </form>
+      <a class="main-header__add-lot button" href="add-lot.html">Добавить лот</a>
+      <nav class="user-menu">
+        <div class="user-menu__logged">
+          <p>Константин</p>
+          <a href="login.html">Выйти</a>
+        </div>
+      </nav>
+    </div> 
+  </header>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
       <a class="navbar-brand" href="/">Artshop</a>
       <div class="navbar-logo">
         <img class="navbar-img"
           src="{{ baseUri }}/assets/img/LogoSmall.png"
           alt="logo" />
       </div>
-      <button class="navbar-toggler"
+         <button class="navbar-toggler"
         type="button"
         data-toggle="collapse"
         data-target="#navbarColor01"
@@ -30,7 +90,7 @@
         aria-expanded="false"
         aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-      </button>
+      </button>   
 
       <div class="collapse navbar-collapse" id="navbarColor01">
         <ul class="navbar-nav mr-auto">
@@ -53,22 +113,80 @@
         </form>
       </div>
     </nav>
-
+ -->
+    <!-- Header -->
+        <!--
+<header class="header" id="header">
     <div class="container">
-      
-      <img src="http://placehold.it/350x150" alt="111" />
-      
-      <img src="assets/img/sea.jpg" alt="222" />
-      <img src="{{ baseUri }}/assets/img/LogoSmall.png" alt="222" />
+     
+        <div class="header__inner">
 
-      <img src="{{ baseUri }}/assets/img/BigLogo.png" alt="logo" />
-    </div>
 
+            <nav class="nav" id="nav">
+                    <div class="navbar-logo">
+        <img class="navbar-img"
+          src="{{ baseUri }}/assets/img/LogoSmall.png"
+          alt="logo" />
+      </div>
+                <a class="nav__link" href="#" data-scroll="#features">Artshop</a>
+                <a class="nav__link" href="#" data-scroll="#works">Works</a>
+                <a class="nav__link" href="#" data-scroll="#team">Our Team</a>
+                <a class="nav__link" href="#" data-scroll="#reviews">Testimonials</a>
+                <a class="nav__link" href="#" data-scroll="#download">Download</a>
+            </nav>
+
+            <button class="burger" type="button" id="navToggle">
+                <span class="burger__item">Menu</span>
+            </button>
+
+        </div>
+    </div>  -->
+
+
+    
     {% block body %}
 
     {% endblock %}
+        <footer class="footer">
+
+          <div class="footer__body">
+           <!--<span class="container">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+           </span> -->
+
+
+    <div>
+
+    <span class="footer__img"><a href="{{ path('home') }}">
+      <img src="{{ baseUri }}/assets/img/BigLogo.png" alt="logo" /></a></span>
+      
+    </div>
+
+                <!-- Copyright -->
+       <div class="footer-copyright text-center">
+     
+		<ul class="icons">
+		<a href="https://www.facebook.com/" class="icon brands alt fa-facebook-f" target="_blank" rel="noopener noreferrer"><span class="label">Facebook</span></a>
+			
+		<a href="https://github.com/Irvpi2019" class="icon brands alt fa-github" target="_blank"
+					rel="noopener noreferrer"><span class="label">GitHub</span></a>
+		<a href="https://www.linkedin.com/in/irina-pintchuk-897b231a7" class="icon brands alt fa-linkedin-in" target="_blank" rel="noopener noreferrer"><span class="label">LinkedIn</span></a>
+
+		</ul>
+
+		<div>	Copyright &copy; 2020  <a href="/"
+					rel="noopener noreferrer">Artshop 2Look.</a> All Rights Reserved</div>
+			<div>Created by:  <a href="https://irinap.promo-36.codeur.online/portfolio/" target="_blank"
+					rel="noopener noreferrer">Irina Pintchuk</a></div>
+
+              </div>
+		  
+
+      </div>
+      </footer>
     {% block javascripts %}
 
     {% endblock %}
+  </div>  
   </body>
 </html>

@@ -2,12 +2,41 @@
 
 {% block body %}
 
-<h1>{{ title }}</h1>
+    <!--
+<h1>{{ title }}</h1> -->
+        <section class="fullscreen">
+            <div class="fullscreen__body">
+                 <!--<h1 class="fullscreen__title">HELLo!</h1>
+                <div class="fullscreen__text">
+                     Wellcome to our site!</div>-->
+ <div id="img_art"><img src="{{ baseUri }}/assets/img/Artshop.png" alt="Artshop" /></div>
+            </div>
+           
+            
+        </section>
+        <section class="fullscreen fullscreen_two" id="about">
+        
+    <div class="fullscreen__body_two">
+      <div class="fullscreen__body_two">
+                <h1 class="fullscreen__title">Hello!</h1>
+                <div class="fullscreen__text_about">
+                      Are you looking for a beautiful, suitable picture for your apartment or office? Our small group of creative artists will help you with this. A wide selection and good quality of the paintings presented on our website (whether classic, romantic or modern) will satisfy any taste. We are glad to see you! Enjoy your shopping!</div>
 
-{% if age > 18 %}
-<p>Tu es majeur.</p>
-{% else %}
-    <p>Tu es mineur.</p> 
-{% endif %}
+            </div>
+
+
+    
+    </div>
+        </section>
+        <section class="fullscreen fullscreen_three">
+            <div class="fullscreen__body">
+                <h1 class="fullscreen__title">BUY BUY!</h1>
+                <div class="fullscreen__text">
+                    See you soon!
+                    
+                </div>
+                <a href="" class="fullscreen__link">BACK</a>
+            </div>
+        </section>
 
 {% endblock %}
